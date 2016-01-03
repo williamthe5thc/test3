@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Login page</title>
+    </head>
+    <body>
+        <h1>Simple Login Page</h1>
+        <form name="login">
+            Username<input type="text" name="userid" value="" />
+            Password<input type="password" name="password" value="" />
+            <input type="button" onclick="check(this.form)" value="Login"/>
+         <input type="reset" value="Cancel"/>
+        </form>
+        <script language="javascript">
+         
+         /* function to check userid & password*/
+            function check(form) {
+             /* the following code checkes whether the userid is blank */
+               if(form.userid.value == '' ) {
+                  alert("Please enter valid username!")/*displays error message*/
+                             
+             /* the following code checkes whether the password is blank */
+                } else if(form.password.value == '') {
+                    alert("Please enter valid password!")/*displays error message*/
+      
+             /* the following code checkes whether the password is blank */
+                } else if(form.userid.value == form.password.value) {
+                    alert("UserId cannot be same as password!")/*displays error message*/
+                
+                } else {
+                    alert("UserId or password is invalid!")/*displays error message*/
+              }
+            } 
+        </script>
+    </body>
+</html>
